@@ -1,0 +1,50 @@
+.reportistica-page {
+    padding: 20px;
+  }
+  
+  .kpi-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .kpi-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: calc(25% - 15px);
+  }
+  
+  .kpi-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .kpi-card p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0088FE;
+  }
+  
+  .chart-container {
+    margin-bottom: 30px;
+  }
+  
+  .chart-container h3 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .kpi-container {
+      flex-wrap: wrap;
+    }
+  
+    .kpi-card {
+      width: calc(50% - 10px);
+      margin-bottom: 15px;
+    }
+  }

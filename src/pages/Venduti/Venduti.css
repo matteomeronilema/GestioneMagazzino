@@ -1,0 +1,89 @@
+.venduti {
+    padding: 20px;
+  }
+  
+  .venduti h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .venduti table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .venduti th,
+  .venduti td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .venduti th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .venduti tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .venduti tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .venduti p {
+    color: #666;
+    font-style: italic;
+  }
+  
+  .venduti td:nth-child(3),
+  .venduti td:nth-child(4) {
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .venduti table {
+      font-size: 14px;
+    }
+  
+    .venduti th,
+    .venduti td {
+      padding: 8px;
+    }
+  
+    .venduti table, .venduti thead, .venduti tbody, .venduti th, .venduti td, .venduti tr {
+      display: block;
+    }
+  
+    .venduti thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    .venduti tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+  
+    .venduti td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    .venduti td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      content: attr(data-label);
+      font-weight: bold;
+    }
+  }

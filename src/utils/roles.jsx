@@ -1,0 +1,41 @@
+// src/utils/roles.js
+
+export const PERMISSIONS = {
+  VIEW_INVENTORY: 'view_inventory',
+  EDIT_INVENTORY: 'edit_inventory',
+  RESERVE_PRODUCT: 'reserve_product',
+  VIEW_RESERVATIONS: 'view_reservations',
+  MANAGE_RESERVATIONS: 'manage_reservations',
+  VIEW_REDAZIONALI: 'view_redazionali',
+  VIEW_RECUPERATI: 'view_recuperati',
+  VIEW_REPORTS: 'view_reports',
+  MANAGE_USERS: 'manage_users',
+  MANAGE_INVENTORY: 'manage_inventory',
+};
+
+export const ROLES = {
+  ADMIN: 'admin',
+  MANAGER: 'manager',
+  USER: 'user',
+};
+
+export const ROLE_PERMISSIONS = {
+  [ROLES.ADMIN]: Object.values(PERMISSIONS),
+  [ROLES.MANAGER]: [
+    PERMISSIONS.VIEW_INVENTORY,
+    PERMISSIONS.EDIT_INVENTORY,
+    PERMISSIONS.RESERVE_PRODUCT,
+    PERMISSIONS.VIEW_RESERVATIONS,
+    PERMISSIONS.MANAGE_RESERVATIONS,
+    PERMISSIONS.VIEW_REDAZIONALI,
+    PERMISSIONS.VIEW_RECUPERATI,
+    PERMISSIONS.VIEW_REPORTS,
+    PERMISSIONS.MANAGE_INVENTORY,
+  ],
+  [ROLES.USER]: [
+    PERMISSIONS.VIEW_INVENTORY,
+    PERMISSIONS.EDIT_INVENTORY,
+    PERMISSIONS.RESERVE_PRODUCT,
+    PERMISSIONS.VIEW_REPORTS,
+  ],
+};
